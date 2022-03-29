@@ -61,7 +61,7 @@ def solve(a, b, c):
 		answer = "Numbers must be less than 1,000,000,000,000"
 		return answer
 
-	#quadratic formula: [-b ± (b² - 4ac)] / 2a
+	#quadratic formula: [-b ± √(b² - 4ac)] / 2a
 
 	bottom_line = 2 * a
 
