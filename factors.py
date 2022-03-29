@@ -28,6 +28,7 @@ def factor(n):
 		return answer
 	
 
+	#get factors
 	for i in range(1, math.ceil(n / 2) + 1):
 		j = n / i
 		if j.is_integer():
@@ -37,10 +38,13 @@ def factor(n):
 				factors.append(i)
 				factors.append(int(j))
 
-
+	#remove duplicates
+	factors = list(set(factors))
+	
+	#sort list
 	answer = sorted(factors)
 
-	#return dict
+	#return list
 	return answer
 
 def main():
