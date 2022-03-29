@@ -3,14 +3,23 @@ import math
 def factor(n):
 
 	#housekeeping vars
+	n = str(n)
 	factors = []
 
 	#handle non-ints
-	try:
-		n = int(n)
-	except:
-		answer = "Please enter an integer"
-		return answer
+	if n[0] in ('-', '+'):
+		if n[1:].isdigit():
+			n = int(n)
+		else:
+			answer = "Please enter an integer"
+			return answer
+	else:
+		if n.isdigit():
+			n = int(n)
+		else:
+			answer = "Please enter an integer"
+			return answer
+		
 
 	#handle large numbers
 	if n > 1000000000000:
