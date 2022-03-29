@@ -56,6 +56,7 @@ def simplify(n):
 	#add last factor
 	prime_factors.append(factors_list[1])
 
+	#get count of each prime factor
 	counts = Counter(prime_factors)
 	
 	remainders = []
@@ -69,10 +70,12 @@ def simplify(n):
 		if i == 1:
 			remainders.append(k)
 
+	#calculate up remainders
 	remainder = reduce(lambda a, b: a * b, remainders)
 	
 	#if there were factors removed
 	if len(removes) > 0:
+		#calculate up removes
 		remove = reduce(lambda a, b: a * b, removes)
 		
 		#convert to string
@@ -86,7 +89,7 @@ def simplify(n):
 	return remove + u"\u221A" + str(remainder)
 
 
-
+#example
 def main():
 	print(simplify(-20))
 

@@ -45,8 +45,8 @@ def solve(a, b, c):
 
 		return answer
 
+#example
 def main():
-
 	print(solve(1,1,1))
 
 if __name__ == "__main__":

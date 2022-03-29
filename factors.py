@@ -56,6 +56,7 @@ def factor(n):
 	#return list
 	return answer
 
+#example
 def main():
 	print(factor(144))
 
