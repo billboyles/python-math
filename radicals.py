@@ -7,14 +7,23 @@ from collections import Counter
 def simplify(n):
 
 	#housekeeping	
-	is_neg = False 
+	is_neg = False
+	n = str(n) 
 	remove = ""			
 		
 	#handle non-ints
-	try:
-		n = int(n)
-	except:
-		return "Please enter an integer"
+	if n[0] in ('-', '+'):
+		if n[1:].isdigit():
+			n = int(n)
+		else:
+			answer = "Please enter an integer"
+			return answer
+	else:
+		if n.isdigit():
+			n = int(n)
+		else:
+			answer = "Please enter an integer"
+			return answer
 
 	#handle large numbers
 	if n > 1000000000000:
